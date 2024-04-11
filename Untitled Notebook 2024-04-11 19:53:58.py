@@ -42,8 +42,8 @@ display(pandas_df)
 
 # COMMAND ----------
 
-df = spark.read.table("main.default.gold_pdf_landing_chunked")
-path = "/Workspace/Repos/odl_user_1291024@databrickslabs.com/test_llm/data/gold.csv"
+df = spark.read.table("main.default.silver_pdf_landing_parsed")
+path = "/Workspace/Repos/odl_user_1291024@databrickslabs.com/test_llm/data/silver.csv"
 pandas_df = df.toPandas()
 pandas_df.to_csv(path, index=False, escapechar=',')
 
